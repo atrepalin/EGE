@@ -4,11 +4,11 @@ const Logo: FC = () => {
 	return (
 		<div className='flex flex-row justify-center items-center cursor-pointer'>
 			<img
-				className='w-[35px] lg:w-[45px]'
+				className='w-[25px] lg:w-[40px]'
 				src='/icons/logo/bivreost.svg'
 				alt='Logo'
 			/>
-			<p className='text-3xl ml-2'>Bivreost</p>
+			<p className='text-xl lg:text-3xl ml-2 font-bold'>Bivreost</p>
 		</div>
 	)
 }
