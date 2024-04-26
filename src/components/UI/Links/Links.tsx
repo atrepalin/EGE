@@ -24,9 +24,9 @@ const LINKS = [
 const Links: FC = () => {
 	return (
 		<div className='flex flex-row'>
-			{LINKS.map(link => {
+			{LINKS.map((link, index) => {
 				return (
-					<Link href={link.href} className='flex flex-row mx-5'>
+					<Link key={index} href={link.href} className='flex flex-row mx-5'>
 						<p className='mr-1'>{link.title}</p>
 						<Icon src={link.iconPath} />
 					</Link>

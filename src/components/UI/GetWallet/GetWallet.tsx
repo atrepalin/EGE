@@ -1,9 +1,16 @@
 import { FC } from 'react'
 import { WALLET } from '../../../config'
 
-const GetWallet: FC = () => {
+interface GetWalletProps {
+	className?: string
+}
+
+const GetWallet: FC<GetWalletProps> = ({ className }) => {
 	return (
-		<button className='btn btn-outline' onClick={() => window.open(WALLET)}>
+		<button
+			className={`btn btn-outline ${className}`}
+			onClick={() => window.open(WALLET)}
+		>
 			Get Wallet
 		</button>
 	)
