@@ -24,7 +24,7 @@ const Header: FC = () => {
 						stroke='currentColor'
 					>
 						{isMenuOpen ? (
-							<path]
+							<path
 								strokeLinecap='round'
 								strokeLinejoin='round'
 								strokeWidth={2}
