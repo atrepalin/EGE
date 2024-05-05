@@ -3,6 +3,10 @@ import { LINK_DISCORD, LINK_GITHUB, LINK_MEDIUM } from '../../../config'
 import Icon from '../Icon/Icon'
 import Link from '../Link/Link'
 
+interface LinksProps {
+	className?: string
+}
+
 const LINKS = [
 	{
 		href: LINK_MEDIUM,
@@ -21,12 +25,16 @@ const LINKS = [
 	},
 ]
 
-const Links: FC = () => {
+const Links: FC<LinksProps> = ({ className }) => {
 	return (
-		<div className='flex flex-row'>
+		<div className={`${className}`}>
 			{LINKS.map((link, index) => {
 				return (
-					<Link key={index} href={link.href} className='flex flex-row mx-5'>
+					<Link
+						key={index}
+						href={link.href}
+						className='flex flex-row mx-5 justify-center items-center'
+					>
 						<p className='mr-1'>{link.title}</p>
 						<Icon src={link.iconPath} />
 					</Link>
